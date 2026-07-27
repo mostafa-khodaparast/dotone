@@ -1,6 +1,9 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 
 
-# Create your views here.
-def test():
-    pass
+def post_list(restonse):
+    return HttpResponse("All posts here...")
+
+
+def post_detail(response, post_id):
+    return HttpResponse(f"Post detail of {post_id}")
